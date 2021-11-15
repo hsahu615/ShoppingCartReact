@@ -3,7 +3,6 @@ import { React, Component } from "react";
 import Nav from "./Nav";
 import Shop from "./shopContent";
 import Cart from "./Cart";
-import Item from "./item";
 
 class RouterSwitch extends Component {
   constructor(props) {
@@ -117,11 +116,11 @@ class RouterSwitch extends Component {
           decrease={this.decrease}
           clear={this.allClear}
         />
-
+        <Shop adding={this.adding} />
+        {/* 
         <Routes>
-          <Route path="/" element={<Shop adding={this.adding} />}></Route>
-          <Route path="/item" element={<Item />}></Route>
-        </Routes>
+
+        </Routes> */}
       </BrowserRouter>
     );
   }
